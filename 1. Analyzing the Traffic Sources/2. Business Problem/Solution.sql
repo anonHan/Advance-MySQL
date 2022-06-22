@@ -7,6 +7,6 @@ FROM
         LEFT JOIN
     orders O ON o.website_session_id = ws.website_session_id
 WHERE
-    ws.website_session_id < '2012-04-14'
+    ws.created_at < '2012-04-14'
         AND ws.utm_source = 'gsearch'
         AND ws.utm_campaign = 'nonbrand';
